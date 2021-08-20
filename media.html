@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bacbfe92f2.js" crossorigin="anonymous"></script>
+</head>
+<!--Style Tag-->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        scroll-behavior: smooth;
+
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #524f4f;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .home-container {
+        width: 100%;
+        height: 100vh;
+        font-family: 'Poppins', sans-serif;
+        background-position: center;
+        background-size: cover;
+        background-image: url(https://cdn.pixabay.com/photo/2016/08/18/23/04/yale-university-1604159_960_720.jpg);
+    }
+
+    .home-navbar {
+        width: 85%;
+        height: 15%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .home-logo {
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        padding: 15px;
+        line-height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        transition: 0.4s ease-in-out;
+    }
+
+    .home-logo:hover {
+        background-color: teal;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .moddle,
+    .program,
+    .phone {
+        font-size: 15px;
+        width: 100px;
+        height: 20px;
+        background-color: teal;
+        padding: 12px;
+        line-height: 20px;
+        text-align: center;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 50px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .moddle:hover,
+    .program:hover,
+    .phone:hover {
+        background-color: #fff;
+        color: teal;
+        font-size: 18px;
+    }
+
+
+    .phone:hover {
+        width: 105px;
+    }
+
+    .program:hover {
+        width: 110px;
+    }
+
+    .moddle p,
+    .program p,
+    .phone p {
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        font-weight: 800;
+    }
+
+    .home-menu {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        padding: 12px;
+        border-radius: 50%;
+        line-height: 20px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    .home-menu:active,
+    .menu-close:active {
+        background-color: teal;
+        color: #fff;
+    }
+
+    .home-menu:hover,
+    .menu-close:hover {
+        transform: scale(1.05);
+    }
+
+    /*home-content*/
+    .home-content {
+        position: absolute;
+        color: #fbfcfd;
+        top: 45%;
+        left: 10%;
+        transform: translateY(-50%);
+    }
+
+    .home-content h4 {
+        font-size: 80px;
+        margin: 10px 0 20px;
+        line-height: 80px;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+
+    .home-content p {
+        font-size: 30px;
+        margin: 5px 0 10px 0;
+    }
+
+    .btn {
+        padding: 15px;
+        width: 200px;
+        border-radius: 50px;
+        outline: none;
+        border: 0;
+        line-height: 20px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        background: teal;
+        color: #fff;
+        transition: 0.2s ease-in;
+    }
+
+    .btn:hover {
+        background-color: #fff;
+        color: teal;
+        transform: scale(1.05);
+    }
+
+    .right-content {
+        position: absolute;
+        right: 15%;
+        top: 35%;
+    }
+
+    .card {
+        width: 200px;
+        height: 230px;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 15px 25px;
+        box-sizing: border-box;
+        margin: 10px 15px;
+        transition: transform 0.5s;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-one {
+        background-image: url(https://www.foonyew.edu.my/img/layout/xingzheng.jpg);
+    }
+
+    .card-two {
+        background-image: url(https://lh3.ggpht.com/p/AF1QipOO9pLm-08cJEUEwWaKlx8Z6TSiq4l8ZSiWOmIC=s1536);
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    @media(max-width:580px) {
+
+        .moddle p,
+        .program p,
+        .phone p {
+            display: none;
+        }
+
+        .moddle,
+        .program,
+        .phone {
+            width: 20px;
+        }
+
+        .moddle:hover,
+        .program:hover,
+        .phone:hover {
+            background-color: #fff;
+            color: teal;
+            font-size: 20px;
+            width: 20px;
+        }
+
+        .home-logo:hover {
+            transform: scale(1.05);
+
+        }
+
+        .home-logo {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .home-content h4 {
+            font-size: 50px;
+        }
+
+        .home-content p {
+            font-size: 25px;
+        }
+
+        .right-content {
+            display: none;
+        }
+
+        .home-menu {
+            color: teal;
+        }
+
+        .home-menu:active {
+            background-color: teal;
+            color: #fff;
+        }
+
+        .menu-box {
+            overflow: hidden;
+        }
+
+        .page-two-title h1 {
+            padding-top: 2.5%;
+        }
+    }
+
+    .menu-box {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        background: linear-gradient(90deg, #d25c72, #7c89cc);
+        overflow-x: hidden;
+        transition: 0.75s ease-out;
+        opacity: 0.95;
+    }
+
+    .menu-ouside-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .menu-inner-box ul li {
+        list-style: none;
+        text-align: center;
+        border: 1.5px solid transparent;
+        width: 330px;
+        height: 45px;
+        padding: 10px;
+        margin: 3%;
+        border-radius: 50px;
+        transition: 0.34s ease-in-out;
+    }
+
+    .menu-inner-box ul li:hover {
+        border: 1.5px solid #fff;
+        background-color: #fff;
+        box-shadow: 2.5px 2.5px 5px 2.5px rgb(184, 184, 184);
+    }
+
+    .menu-inner-box ul li a {
+        font-size: 35px;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        line-height: 40px;
+        transition: 0.34s ease-in-out;
+        letter-spacing: 0.5px;
+    }
+
+    .menu-inner-box ul li a:hover {
+        color: teal;
+    }
+
+    .menu-inner-box ul li a i {
+        padding-right: 10px;
+        padding-top: 5px;
+        color: teal;
+    }
+
+    .menu-close {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        padding: 12px;
+        border-radius: 50%;
+        line-height: 20px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        top: 4.5%;
+        right: 7.5%;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+    }
+
+    /*To Top Button Style*/
+    #top-btn {
+        position: fixed;
+        bottom: 40%;
+        right: 55px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 45px;
+        color: #000000;
+        background-color: #fff;
+        text-decoration: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .4s ease-out;
+        font-size: 25px;
+    }
+
+    #top-btn:hover {
+        background-color: #000000;
+        color: white;
+    }
+
+    #top-btn:active {
+        background-color: teal;
+        color: white;
+    }
+
+    #top-btn.active {
+        bottom: 50px;
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    /*To Top Button Style*/
+    /*Page-Two*/
+    .page-two {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(90deg, #f3d1d2, #b0d2db, #fee895);
+        padding-top: 3%;
+    }
+
+    .page-two-title {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 10vh;
+
+    }
+
+    .page-two-title h1 {
+        width: 500px;
+        height: 50px;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        transition: 0.35s ease-in-out;
+        border-radius: 10px;
+        letter-spacing: 0.010rem;
+    }
+
+    .page-two-title h1:hover {
+        background-color: teal;
+        color: #fff;
+        border-radius: 50px;
+    }
+
+
+    /*Skill bar style*/
+    .skills-bar {
+        width: 100%;
+        max-width: 600px;
+
+    }
+
+    .skills-bar h1 {
+        font-family: 'Poppins', sans-serif;
+        color: teal;
+    }
+
+    .skill-name {
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    .skill-bar {
+        height: 14px;
+        background: #282828;
+        border-radius: 10px;
+    }
+
+    .skill-per {
+        height: 14px;
+        background: #d13639;
+        border-radius: 10px;
+        position: relative;
+        animation: fillBars 2.5s 1;
+        margin-top: 1%;
+    }
+
+    .skill-per::before {
+        content: attr(per);
+        position: absolute;
+        padding: 4px 6px;
+        background: #f1f1f1;
+        font-weight: 800;
+        border-radius: 4px;
+        font-size: 15px;
+        font-family: cursive;
+        letter-spacing: 1px;
+        top: -35px;
+        right: 0;
+        transform: translateX(50%);
+    }
+
+    .skill-per::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #f1f1f1;
+        top: -15px;
+        right: 0;
+        transform: translateX(50%) rotate(45deg);
+        border-radius: 2px;
+    }
+
+    @keyframes fillBars {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    .center-two {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+    }
+</style>
+
+<body>
+    <div class="home-container" id="Home">
+        <div class="home-navbar">
+            <span class="home-logo"><i class="fas fa-university"></i></span>
+            <span class="moddle">
+                <i class="fa fa-home">
+                    <p>Moddle</p>
+                </i>
+            </span>
+            <span class="program">
+                <i class="fab fa-adn">
+                    <p>Program</p>
+                </i>
+            </span>
+            <span class="phone">
+                <i class="fa fa-phone">
+                    <p>Contact</p>
+                </i>
+            </span>
+            <!--side menu-->
+            <span class="home-menu" onclick="openmenu()">
+                <i class="fas fa-bars"></i>
+            </span>
+            <!--Content Text-->
+            <div class="home-content">
+                <h4>TimeTable</h4>
+                <p>Giving TimeTable<br>
+                    style Every Style</p>
+                <a href="#"><button type="button" class="btn">Get Code</button></a>
+
+            </div>
+            <div class="right-content">
+                <div class="col">
+                    <div class="card card-one"></div>
+                    <div class="card card-two"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-box" id="menu-box">
+        <div class="menu-ouside-box">
+            <a onclick="closemenu()" class="menu-close"><i class="fas fa-times"></i></a>
+            <div class="menu-inner-box">
+                <ul>
+                    <li><a href="#" onclick="closemenu()"><i class="fas fa-bookmark"></i>Monday</a></li>
+                    <li><a href="#" onclick="closemenu()"><i class="fas fa-bookmark"></i>Tuesday</a></li>
+                    <li><a href="#" onclick="closemenu()"><i class="fas fa-bookmark"></i>Wednesday</a></li>
+                    <li><a href="#" onclick="closemenu()"><i class="fas fa-bookmark"></i>Thursday</a></li>
+                    <li><a href="#" onclick="closemenu()"><i class="fas fa-bookmark"></i>Friday</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Top Button-->
+    <a id="top-btn" href="#Home"><i class="fas fa-arrow-up"></i></a>
+
+
+
+    <!--script tag-->
+    <!--Menu-box-script-->
+    <script>
+        function openmenu() {
+            document.getElementById("menu-box").style.width = "100%"
+        }
+        function closemenu() {
+            document.getElementById("menu-box").style.width = "0"
+        }
+    </script>
+    <!--to top button script-->
+    <script>
+        const topbtn = document.getElementById("top-btn");
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                topbtn.classList.add('active');
+            } else {
+                topbtn.classList.remove('active');
+            }
+        })
+    </script>
+</body>
+
+</html>
